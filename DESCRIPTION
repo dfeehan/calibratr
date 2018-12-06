@@ -1,11 +1,10 @@
 Package: calibratr
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Simplify Survey Calibration
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Dennis M. Feehan
+Maintainer: The package maintainer <feehan@berkeley.edu>
+Description: This package provides some functions that are essentially wrappers around the survey pacakge's calibration functionality.
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
