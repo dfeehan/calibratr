@@ -8,3 +8,6 @@ Description: This package provides some functions that are essentially wrappers 
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr

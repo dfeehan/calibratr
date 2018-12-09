@@ -4,3 +4,6 @@
 .Ruserdata
 
 *-test.R
+inst/doc
+
+R/scratch.R
