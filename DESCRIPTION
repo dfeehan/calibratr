@@ -7,6 +7,7 @@ Maintainer: The package maintainer <feehan@berkeley.edu>
 Description: This package provides some functions that are essentially wrappers around the survey pacakge's calibration functionality.
 License: GPL-2
 Encoding: UTF-8
+Imports: survey
 LazyData: true
 Suggests: knitr,
     rmarkdown

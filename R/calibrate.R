@@ -26,7 +26,7 @@ calibratr <- function(fml, pdat, pweight, sdesign, calfun="linear") {
                       return(sum(col*weights))
                     })
 
-  res <- calibrate(design = sdesign,
+  res <- survey::calibrate(design = sdesign,
                    formula = fml,
                    calfun = calfun,
                    population = pop.tots)
