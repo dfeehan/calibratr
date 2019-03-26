@@ -102,8 +102,10 @@ plot_weightcomp_margins <- function(data,
                                     title="") {
 
   #cmp <- compare_covar_margins(datalist=list(data, data, pdat),
-  datalist <- rep(list(survey), length(weights))
-  datalist <- c(datalist, list(pop))
+  #datalist <- rep(list(survey), length(weights))
+  datalist <- rep(list(data), length(weights))
+  #datalist <- c(datalist, list(pop))
+  datalist <- c(datalist, list(pdat))
 
   if(is.null(names(weights))) {
     names(weights) <- paste(weights)
