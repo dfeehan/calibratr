@@ -9,6 +9,10 @@
 ##' survey data have missingness on some of the calibration variables. Missingness
 ##' will also cause total calibrated weights to differ from total un-calibrated weights.
 ##'
+##' WISHLIST:
+##'   check that data type of the overlapping columns between popn and survey data
+##'   match
+##'
 ##' @param fml formula describing the calibration design (NB: this relies on
 ##'   varnames and levels being the same in pdat and sdat)
 ##' @param pdat population-level data
@@ -17,6 +21,7 @@
 ##' @param calfun optional arg for survey package's calibrate fn
 ##'
 ##' @return a vector of calibrated weights
+##' @export
 calibratr <- function(fml, pdat, pweight, sdesign, calfun="linear") {
 
   pop.tots <- model.matrix(fml, data=pdat)
@@ -27,7 +32,8 @@ calibratr <- function(fml, pdat, pweight, sdesign, calfun="linear") {
                       return(sum(col*weights))
                     })
 
-  res <- survey::calibrate(design = sdesign,
+  res <- survey::calibrate(
+                   design = sdesign,
                    formula = fml,
                    calfun = calfun,
                    population = pop.tots)
@@ -56,6 +62,7 @@ agg_covars <- function(dat, covars, weight) {
 ##' @param title
 ##'
 ##' @return A dataframe with different weight comparisons
+##' @export
 compare_covar_margins <- function(datalist,
                                   weights,
                                   names,
